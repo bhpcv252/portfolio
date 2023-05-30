@@ -1,3 +1,8 @@
+# Personal Portfolio ( Work in Progress )
+Desing File: [Figma (WIP)](https://www.figma.com/file/p3bORZ5sWLD3mg4WVEtaSa/folio-design?type=design&node-id=0%3A1&t=OsGSOCuRUm5tMaVZ-1)
+
+---------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
