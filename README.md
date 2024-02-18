@@ -1,6 +1,11 @@
-# Personal Portfolio ( Work in Progress )
-Design File: [Figma (WIP)](https://www.figma.com/file/p3bORZ5sWLD3mg4WVEtaSa/folio-design?type=design&node-id=0%3A1&t=OsGSOCuRUm5tMaVZ-1)
-Live: [https://portfolio-bhpcv252.vercel.app/ (WIP)](https://portfolio-bhpcv252.vercel.app/)
+# Personal Portfolio
+
+
+Design File: [Figma](https://www.figma.com/file/p3bORZ5sWLD3mg4WVEtaSa/folio-design?type=design&node-id=0%3A1&t=OsGSOCuRUm5tMaVZ-1) (WIP)
+
+Live: [https://portfolio-bhpcv252.vercel.app/](https://portfolio-bhpcv252.vercel.app/) (WIP)
+
+-------------------------
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
