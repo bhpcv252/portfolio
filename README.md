@@ -1,7 +1,7 @@
 # Personal Portfolio
 
 
-Design File: [Figma](https://www.figma.com/file/p3bORZ5sWLD3mg4WVEtaSa/folio-design?type=design&node-id=0%3A1&t=OsGSOCuRUm5tMaVZ-1) (WIP)
+Design File: [Figma](https://www.figma.com/file/p3bORZ5sWLD3mg4WVEtaSa/folio-design?type=design&node-id=0%3A1&t=OsGSOCuRUm5tMaVZ-1)
 
 Live: [https://portfolio-bhpcv252.vercel.app/](https://portfolio-bhpcv252.vercel.app/) (WIP)
 
