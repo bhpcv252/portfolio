@@ -1,0 +1,42 @@
+html {
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    font-family: system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+  }
+  
+  body {
+    margin: 0;
+    position: relative;
+    min-height: 100%;
+    font-feature-settings: "kern";
+  }
+  
+  *,
+  *::before,
+  *::after {
+    border-width: 0;
+    border-style: solid;
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  
+  img, svg, video {
+    display: block;
+    max-width: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
