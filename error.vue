@@ -82,6 +82,7 @@ h2 {
 
         &.hide {
             opacity: 0;
+            visibility: hidden;
         }
     }
 }
