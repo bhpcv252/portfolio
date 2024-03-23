@@ -6,6 +6,10 @@ const props = defineProps({
     error: Object as () => NuxtError
 })
 
+useHead({
+    title: `${props.error?.statusCode}: ${props.error?.statusMessage} - Sonu's Portfolio`
+})
+
 const isHovering: Ref<boolean> = ref(false)
 
 </script>
@@ -15,7 +19,7 @@ const isHovering: Ref<boolean> = ref(false)
         <h2>{{ error?.statusCode }}</h2>
         <p class="moneta-195-bold message">{{ error?.statusCode === 404? 'Page Not Found' : error?.statusMessage }}</p>
         <GridRow>
-            <GridCol from="6" to="8">
+            <GridCol :from="6" :to="8">
                 <div class="centered-wrapper">
                     <p class="para-top">
                         Nothing to see here except a cat chilling
