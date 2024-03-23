@@ -20,3 +20,7 @@
   $result: math.div($px, $baseMobileFont);
   @return ($result * 1rem);
 }
+
+@function placeAt($at, $padding: variables.$basePadding) {
+  @return pxToRem((variables.$baseColSize * ($at - 1)) + $padding);
+}

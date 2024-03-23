@@ -11,6 +11,12 @@
     width: utils.pxToRem(60);
     height: utils.pxToRem(60);
 
+    &.center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     &.top-left {
         top: 0;
         left: 0;

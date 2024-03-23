@@ -223,13 +223,35 @@ body {
 }
 
 .container {
+    padding: utils.pxToRem(30);
+}
+
+.container-h {
     padding: 0 utils.pxToRem(30);
 }
 
+.container-v {
+    padding: utils.pxToRem(30) 0;
+}
+
 h1, h2, .moneta-195-bold {
-    font-family: 'Moneta', sans-serif;
+    font-family: 'Moneta', serif;
     font-size: utils.pxToRem(195);
     font-weight: bold;
+}
+
+h3, .moneta-55-regular {
+    font-family: 'Moneta', serif;
+    font-size: utils.pxToRem(55);
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.grotesk-22-light {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    font-weight: 300;
+    font-size: utils.pxToRem(22);
+    color: variables.$secColor;
 }
 
 a:link, a:visited, a:hover, a:active {
