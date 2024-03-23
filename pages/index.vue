@@ -81,6 +81,7 @@ h1 {
     }
 
     .menu-item {
+        cursor: pointer;
 
         img {
             margin-bottom: utils.pxToRem(82);
@@ -148,7 +149,6 @@ h1 {
     bottom: utils.pxToRem(variables.$basePadding);
     left: utils.pxToRem(variables.$basePadding);
     right: utils.pxToRem(variables.$basePadding);
-    font-weight: 400;
 }
 
 </style>
