@@ -86,18 +86,18 @@ h1 {
     }
 
     .jump {
-        top: utils.pxToRem(270);
+        top: utils.pxToVH(270);
         left: utils.placeAt(2);
     }
 
     .scroll {
-        bottom: utils.pxToRem(118);
+        bottom: utils.pxToVH(118);
         right: utils.placeAt(2);
     }
 
     .item-1 {
         left: utils.placeAt(2);
-        bottom: utils.pxToRem(258);
+        bottom: utils.pxToVH(258);
 
         img {
             width: utils.pxToRem(235);
@@ -106,7 +106,7 @@ h1 {
 
     .item-2 {
         right: utils.placeAt(8);
-        top: utils.pxToRem(270);
+        top: utils.pxToVH(270);
         text-align: right;
 
         img {
@@ -118,7 +118,7 @@ h1 {
 
     .item-3 {
         left: utils.placeAt(8);
-        bottom: utils.pxToRem(118);
+        bottom: utils.pxToVH(118);
 
         img {
             width: utils.pxToRem(283);
@@ -127,7 +127,7 @@ h1 {
 
     .item-4 {
         right: utils.placeAt(2);
-        top: utils.pxToRem(357);
+        top: utils.pxToVH(357);
         text-align: right;
 
         img {
