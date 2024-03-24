@@ -11,6 +11,11 @@
   @return ($result * 1rem);
 }
 
+@function pxToVH($px, $baseHeight: variables.$baseHeight) {
+  $result: math.div($px, $baseHeight);
+  @return ($result * 100vh);
+}
+
 @function pxToRemTab($px, $baseTabFont: variables.$baseTabFont) {
   $result: math.div($px, $baseTabFont);
   @return ($result * 1rem);

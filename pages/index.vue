@@ -9,6 +9,7 @@
         <Title>Home</Title>
         <SectionBanner />
         <SectionAbout />
+        <SectionWork />
     </div>
 </template>
 

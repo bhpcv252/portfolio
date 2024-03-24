@@ -10,9 +10,9 @@
             <GridRow class="full-height">
                 <GridCol :from="2" :to="6">
                     <div class="left-panel">
-                        <img src="~/assets/images/about-thumb.png" alt="About" />
                         <h2 class="split-heading">
-                            About
+                            <img src="~/assets/images/about-thumb.png" alt="About" />
+                            <span>About</span>
                             <div class="moneta-55-regular">Me</div>
                         </h2>
                         <a href="#" class="btn" target="_blank">
@@ -60,23 +60,27 @@
 }
 
 .left-panel {
-    padding-top: utils.pxToRem(223);
-
-    img {
-        position: absolute;
-        top: utils.pxToRem(150);
-        left: utils.pxToRem(180);
-        width: utils.pxToRem(153);
-    }
+    padding-top: utils.pxToVH(223);
 
     h2 {
         margin-bottom: utils.pxToRem(122);
         position: relative;
+
+        img {
+            position: absolute;
+            top: utils.pxToRem(-103);
+            left: utils.pxToRem(-5);
+            width: utils.pxToRem(153);
+        }
+
+        span {
+            position: relative;
+        }
     }
 }
 
 .right-panel {
-    padding-bottom: utils.pxToRem(163);
+    padding-bottom: utils.pxToVH(163);
 
     p {
         &:nth-child(1) {
