@@ -240,7 +240,7 @@ h1, h2, .moneta-195-bold {
     font-weight: bold;
 }
 
-h3, .moneta-55-regular {
+h3, .moneta-55-regular, .btn {
     font-family: 'Moneta', serif;
     font-size: utils.pxToRem(55);
     font-weight: normal;
@@ -260,4 +260,40 @@ a:link, a:visited, a:hover, a:active {
 
 p {
     line-height: utils.pxToRem(36);
+}
+
+.split-heading {
+    display: flex;
+    gap: utils.pxToRem(30);
+    align-items: baseline;
+}
+
+.btn {
+    padding: utils.pxToRem(26) utils.pxToRem(22) utils.pxToRem(14) utils.pxToRem(42);
+    background-color: variables.$textColor;
+    color: variables.$bgColor;
+    text-transform: capitalize;
+    border-radius: utils.pxToRem(50);
+    display: inline-flex;
+    gap: utils.pxToRem(100);
+
+    span {
+        display: inline-block;
+    }
+
+    .icon {
+        width: utils.pxToRem(45);
+
+        &.external {
+            transform: rotate(-27.38deg);
+        }
+
+        svg {
+            width: 100%;
+        }
+    }
+}
+
+a.btn:link, a.btn:visited, a.btn:hover, a.btn:active {
+    color: variables.$bgColor;
 }

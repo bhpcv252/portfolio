@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/styles/global.scss'],
+  modules: ['nuxt-svgo'],
   vite: {
     css: {
       preprocessorOptions: {
