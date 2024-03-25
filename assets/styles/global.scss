@@ -269,13 +269,14 @@ p {
 }
 
 .btn {
-    padding: utils.pxToRem(26) utils.pxToRem(22) utils.pxToRem(14) utils.pxToRem(42);
+    padding: utils.pxToRem(20) utils.pxToRem(22) utils.pxToRem(14) utils.pxToRem(42);
     background-color: variables.$textColor;
     color: variables.$bgColor;
     text-transform: capitalize;
     border-radius: utils.pxToRem(50);
     display: inline-flex;
     gap: utils.pxToRem(100);
+    align-items: center;
 
     span {
         display: inline-block;

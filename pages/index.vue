@@ -10,6 +10,7 @@
         <SectionBanner />
         <SectionAbout />
         <SectionWork />
+        <SectionExperiments />
     </div>
 </template>
 

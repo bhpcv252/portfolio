@@ -27,6 +27,8 @@
                 </div>
                 <div class="grotesk-22-light more">and many more...</div>
             </div>
+            <PlusIcon class="bottom-right" />
+            <PlusIcon class="bottom-left" />
         </div>
     </div>
 </template>
