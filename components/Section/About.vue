@@ -41,6 +41,8 @@
                     </div>
                 </GridCol>
             </GridRow>
+            <PlusIcon class="bottom-right" />
+            <PlusIcon class="bottom-left" />
         </div>
     </div>
 </template>
