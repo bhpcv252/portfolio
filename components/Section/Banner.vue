@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="banner">
+    <div class="home" id="home">
         <div class="container">
             <PlusIcon class="center" />
             <h1>
@@ -17,25 +17,25 @@
                 <div class="menu-info jump grotesk-22-light">
                     jump to...
                 </div>
-                <div class="menu-item item-1">
+                <a href="#work" class="menu-item item-1 hover-item">
                     <img src="~/assets/images/work-thumb.png" alt="Work" />
-                    <h3>Work</h3>
-                </div>
-                <div class="menu-item item-2">
+                    <h3 class="hover-line">Work</h3>
+                </a>
+                <a href="#about" class="menu-item item-2 hover-item">
                     <img src="~/assets/images/about-thumb.png" alt="About" />
-                    <h3>About</h3>
-                </div>
-                <div class="menu-item item-3">
+                    <h3 class="hover-line">About</h3>
+                </a>
+                <a href="#experiments" class="menu-item item-3 hover-item">
                     <img src="~/assets/images/experiments-thumb.png" alt="Experiments" />
-                    <h3>Experiments</h3>
-                </div>
-                <div class="menu-item item-4">
+                    <h3 class="hover-line">Experiments</h3>
+                </a>
+                <a href="#contact" class="menu-item item-4 hover-item">
                     <img src="~/assets/images/catch-me-thumb.png" alt="Catch Me" />
-                    <h3>Catch Me</h3>
-                </div>
-                <div class="menu-info scroll grotesk-22-light">
+                    <h3 class="hover-line">Catch Me</h3>
+                </a>
+                <a class="menu-info scroll grotesk-22-light">
                     or just...
-                </div>
+                </a>
             </div>
             <div class="bottom-info">
                 <div>
@@ -73,16 +73,13 @@ h1 {
 
 .menu-wrapper {
 
-    &>div {
+    &>div, &>a{
         position: absolute;
     }
 
     .menu-item {
-        cursor: pointer;
-
-        img {
-            margin-bottom: utils.pxToRem(82);
-        }
+        display: grid;
+        gap: utils.pxToRem(82);
     }
 
     .jump {
@@ -98,6 +95,7 @@ h1 {
     .item-1 {
         left: utils.placeAt(2);
         bottom: utils.pxToVH(258);
+        justify-items: start;
 
         img {
             width: utils.pxToRem(235);
@@ -108,17 +106,17 @@ h1 {
         right: utils.placeAt(8);
         top: utils.pxToVH(270);
         text-align: right;
+        justify-items: end;
 
         img {
             width: utils.pxToRem(153);
-            margin-right: 0;
-            margin-left: auto;
         }
     }
 
     .item-3 {
         left: utils.placeAt(8);
         bottom: utils.pxToVH(118);
+        justify-items: start;
 
         img {
             width: utils.pxToRem(283);
@@ -129,11 +127,10 @@ h1 {
         right: utils.placeAt(2);
         top: utils.pxToVH(357);
         text-align: right;
+        justify-items: end;
 
         img {
             width: utils.pxToRem(162);
-            margin-right: 0;
-            margin-left: auto;
         }
     }
 }

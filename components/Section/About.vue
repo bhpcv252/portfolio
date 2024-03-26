@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="about">
+    <div class="about" id="about">
         <div class="container">
             <GridRow class="full-height">
                 <GridCol :from="2" :to="6">

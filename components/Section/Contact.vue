@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="container">
             <div class="top-panel">
                 <GridRow>
@@ -39,20 +39,20 @@
                 </div>
             </div>
             <div class="footer">
-                <div class="work-item">
-                    <a href="#" class="moneta-55-regular">Home</a>
+                <div class="work-item hover-item hover-line">
+                    <a href="#home" class="moneta-55-regular">Home</a>
                 </div>
                 <PlusIcon class="relative"/>
-                <div class="work-item">
-                    <a href="#" class="moneta-55-regular">About</a>
+                <div class="work-item hover-item hover-line">
+                    <a href="#about" class="moneta-55-regular">About</a>
                 </div>
                 <PlusIcon class="relative" />
-                <div class="work-item">
-                    <a href="#" class="moneta-55-regular">Work</a>
+                <div class="work-item hover-item hover-line">
+                    <a href="#work" class="moneta-55-regular">Work</a>
                 </div>
                 <PlusIcon class="relative"/>
-                <div class="work-item">
-                    <a href="#" class="moneta-55-regular">Experiments</a>
+                <div class="work-item hover-item hover-line">
+                    <a href="#experiments" class="moneta-55-regular">Experiments</a>
                 </div>
             </div>
         </div>

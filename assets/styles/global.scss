@@ -7,10 +7,10 @@
     font-family: 'Moneta';
     src: url('/fonts/moneta/Moneta-Light.eot');
     src: local('Moneta'), local('Moneta Light'),
-    url('/fonts/moneta/Moneta-Light.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/moneta/Moneta-Light.woff2') format('woff2'),
-    url('/fonts/moneta/Moneta-Light.woff') format('woff'),
-    url('/fonts/moneta/Moneta-Light.ttf') format('truetype');
+        url('/fonts/moneta/Moneta-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/moneta/Moneta-Light.woff2') format('woff2'),
+        url('/fonts/moneta/Moneta-Light.woff') format('woff'),
+        url('/fonts/moneta/Moneta-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -20,10 +20,10 @@
     font-family: 'Moneta';
     src: url('/fonts/moneta/Moneta-Regular.eot');
     src: local('Moneta'), local('Moneta Regular'),
-    url('/fonts/moneta/Moneta-Regular.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/moneta/Moneta-Regular.woff2') format('woff2'),
-    url('/fonts/moneta/Moneta-Regular.woff') format('woff'),
-    url('/fonts/moneta/Moneta-Regular.ttf') format('truetype');
+        url('/fonts/moneta/Moneta-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/moneta/Moneta-Regular.woff2') format('woff2'),
+        url('/fonts/moneta/Moneta-Regular.woff') format('woff'),
+        url('/fonts/moneta/Moneta-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -33,10 +33,10 @@
     font-family: 'Moneta';
     src: url('/fonts/moneta/Moneta-Bold.eot');
     src: local('Moneta'), local('Moneta Bold'),
-    url('/fonts/moneta/Moneta-Bold.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/moneta/Moneta-Bold.woff2') format('woff2'),
-    url('/fonts/moneta/Moneta-Bold.woff') format('woff'),
-    url('/fonts/moneta/Moneta-Bold.ttf') format('truetype');
+        url('/fonts/moneta/Moneta-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/moneta/Moneta-Bold.woff2') format('woff2'),
+        url('/fonts/moneta/Moneta-Bold.woff') format('woff'),
+        url('/fonts/moneta/Moneta-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -46,10 +46,10 @@
     font-family: 'Moneta';
     src: url('/fonts/moneta/Moneta-Black.eot');
     src: local('Moneta'), local('Moneta Black'),
-    url('/fonts/moneta/Moneta-Black.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/moneta/Moneta-Black.woff2') format('woff2'),
-    url('/fonts/moneta/Moneta-Black.woff') format('woff'),
-    url('/fonts/moneta/Moneta-Black.ttf') format('truetype');
+        url('/fonts/moneta/Moneta-Black.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/moneta/Moneta-Black.woff2') format('woff2'),
+        url('/fonts/moneta/Moneta-Black.woff') format('woff'),
+        url('/fonts/moneta/Moneta-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -61,7 +61,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Ultra Thin'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXXThin.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXXThin.ttf') format('truetype');
     font-weight: 50;
     font-style: normal;
     font-display: swap;
@@ -70,7 +70,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Ultra Thin Italic'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXXThinItalic.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXXThinItalic.ttf') format('truetype');
     font-weight: 50;
     font-style: italic;
     font-display: swap;
@@ -79,7 +79,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Thin'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXThin.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXThin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -88,7 +88,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Thin Italic'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXThinItalic.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXThinItalic.ttf') format('truetype');
     font-weight: 100;
     font-style: italic;
     font-display: swap;
@@ -97,7 +97,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Extra Light'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayThin.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayThin.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -106,7 +106,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Extra Light Italic'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayThinItalic.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayThinItalic.ttf') format('truetype');
     font-weight: 200;
     font-style: italic;
     font-display: swap;
@@ -115,7 +115,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Light'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayLight.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayLight.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -124,7 +124,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Light Italic'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayLightItalic.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayLightItalic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -133,7 +133,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Roman'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayRoman.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayRoman.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -142,7 +142,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Roman Italic'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayRomanItalic.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayRomanItalic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -151,7 +151,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Medium'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayMedium.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayMedium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -160,7 +160,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Medium Italic'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayMediumItalic.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayMediumItalic.ttf') format('truetype');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -169,7 +169,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Bold'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBold.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -178,7 +178,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Bold Italic'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBoldItalic.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -187,7 +187,7 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Black'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBlack.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBlack.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -196,13 +196,13 @@
 @font-face {
     font-family: 'Neue Haas Grotesk Display Pro';
     src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Black Italic'),
-    url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBlackItalic.ttf') format('truetype');
+        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBlackItalic.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
 }
 
-html  {
+html {
     scroll-behavior: smooth;
     font-size: utils.calcBaseVW(variables.$baseFont, variables.$baseWidth);
 }
@@ -238,13 +238,17 @@ img {
     padding: utils.pxToRem(30) 0;
 }
 
-h1, h2, .moneta-195-bold {
+h1,
+h2,
+.moneta-195-bold {
     font-family: 'Moneta', serif;
     font-size: utils.pxToRem(195);
     font-weight: bold;
 }
 
-h3, .moneta-55-regular, .btn {
+h3,
+.moneta-55-regular,
+.btn {
     font-family: 'Moneta', serif;
     font-size: utils.pxToRem(55);
     font-weight: normal;
@@ -258,7 +262,10 @@ h3, .moneta-55-regular, .btn {
     color: variables.$secColor;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link,
+a:visited,
+a:hover,
+a:active {
     color: variables.$textColor;
 }
 
@@ -299,6 +306,56 @@ p {
     }
 }
 
-a.btn:link, a.btn:visited, a.btn:hover, a.btn:active {
+a.btn:link,
+a.btn:visited,
+a.btn:hover,
+a.btn:active {
     color: variables.$bgColor;
+}
+
+.hover-item {
+
+    &.hover-line, .hover-line {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            background-color: variables.$textColor;
+            transform: scale3d(0, 1, 1);
+            transition: transform 0.3s cubic-bezier(0.61,0.04,0.45,0.96);
+            transform-origin: left;
+        }
+
+        &.origin-center {
+            &::after {
+                transform-origin: center;
+            }
+        }
+    }
+}
+
+.hover-item:hover {
+
+    &.hover-line, .hover-line {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            background-color: variables.$textColor;
+            transform: scale3d(1, 1, 1);
+            transition: transform 0.3s cubic-bezier(0.61,0.04,0.45,0.96);
+        }
+    }
 }

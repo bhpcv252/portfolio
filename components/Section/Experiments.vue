@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="experiments">
+    <div class="experiments" id="experiments">
         <div class="container">
             <div class="top-panel">
                 <h2 class="split-heading">
@@ -33,8 +33,8 @@
                 <GridRow>
                     <GridCol :from="2" :to="12">
                         <div class="experiment-links">
-                            <div class="experiment-item">
-                                <div class="moneta-55-regular title">
+                            <div class="experiment-item hover-item">
+                                <div class="moneta-55-regular title hover-line origin-center">
                                     GITHUB
                                 </div>
                                 <div class="link-wrapper">
@@ -51,8 +51,8 @@
                                     3D, WebGL, JS
                                 </div>
                             </div>
-                            <div class="experiment-item">
-                                <div class="moneta-55-regular title">
+                            <div class="experiment-item hover-item">
+                                <div class="moneta-55-regular title hover-line origin-center">
                                     SHADERTOY
                                 </div>
                                 <div class="link-wrapper">
@@ -65,12 +65,12 @@
                                         </span>
                                     </a>
                                 </div>
-                                <div class="grotesk-22-light info">
+                                <div class="grotesk-22-light info ">
                                     GLSL Shaders
                                 </div>
                             </div>
-                            <div class="experiment-item">
-                                <div class="moneta-55-regular title">
+                            <div class="experiment-item hover-item">
+                                <div class="moneta-55-regular title hover-line origin-center">
                                     CODEPEN
                                 </div>
                                 <div class="link-wrapper">
@@ -87,8 +87,8 @@
                                     HTML, CSS, JS
                                 </div>
                             </div>
-                            <div class="experiment-item">
-                                <div class="moneta-55-regular title">
+                            <div class="experiment-item hover-item">
+                                <div class="moneta-55-regular title hover-line origin-center">
                                     P5.JS SKETCHES
                                 </div>
                                 <div class="link-wrapper">
@@ -134,7 +134,7 @@ h2 {
     .experiment-item {
         display: grid;
         justify-items: center;
-        cursor: pointer;
+        cursor: context-menu;
     }
 }
 
@@ -148,8 +148,12 @@ h2 {
         content: '';
         position: absolute;
         width: 1px;
-        height: utils.pxToRem(118);
+        height: utils.pxToRem(128);
+        top: 0;
         background-color: variables.$textColor;
+        transform: scale3d(1, 1, 1);
+        transition: transform 0.2s 0.2s cubic-bezier(0.61,0.04,0.45,0.96);
+        transform-origin: top;
     }
 
     a {
@@ -157,7 +161,26 @@ h2 {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.2s linear, opacity 0.2s linear;
+    }
+}
+
+.hover-item:hover {
+
+    .link-wrapper {
+
+        &::before {
+            transform: scale3d(1, 0, 1);
+            transition: transform 0.2s cubic-bezier(0.61,0.04,0.45,0.96);
+        }
+
+        a {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0.2s 0.2s linear, opacity 0.2s 0.2s linear;
+        }
     }
 }
 
