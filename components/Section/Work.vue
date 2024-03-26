@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="work">
+    <div class="work" id="work">
         <div class="container">
             <h2>
                 Work
@@ -13,16 +13,16 @@
             <div class="list-wrapper">
                 <div class="work-list">
                     <div class="work-item">
-                        <a href="#" class="moneta-55-regular">Equinox Villa</a>
+                        <a href="#" class="moneta-55-regular hover-item hover-line origin-center">Equinox Villa</a>
                     </div>
                     <div class="work-item">
-                        <a href="#" class="moneta-55-regular">TLNTHUB</a>
+                        <a href="#" class="moneta-55-regular hover-item hover-line origin-center">TLNTHUB</a>
                     </div>
                     <div class="work-item">
-                        <a href="#" class="moneta-55-regular">Bluestreak Math</a>
+                        <a href="#" class="moneta-55-regular hover-item hover-line origin-center">Bluestreak Math</a>
                     </div>
                     <div class="work-item">
-                        <a href="#" class="moneta-55-regular">DM Slider - Her App</a>
+                        <a href="#" class="moneta-55-regular hover-item hover-line origin-center">DM Slider - Her App</a>
                     </div>
                 </div>
                 <div class="grotesk-22-light more">and many more...</div>
