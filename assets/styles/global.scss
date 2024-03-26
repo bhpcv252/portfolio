@@ -222,6 +222,10 @@ body {
     color: variables.$bgColor;
 }
 
+img {
+    background-blend-mode: difference;
+}
+
 .container {
     padding: utils.pxToRem(30);
 }

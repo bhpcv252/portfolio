@@ -7,9 +7,13 @@
 
 <style lang="scss" scoped>
 .icon-wrapper {
-    position: absolute;
     width: utils.pxToRem(60);
     height: utils.pxToRem(60);
+    position: relative;
+    
+    &:not(.relative) {
+        position: absolute;
+    }
 
     &.center {
         top: 50%;
