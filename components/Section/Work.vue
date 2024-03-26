@@ -13,16 +13,16 @@
             <div class="list-wrapper">
                 <div class="work-list">
                     <div class="work-item">
-                        <a href="#" class="moneta-55-regular hover-item hover-line origin-center">Equinox Villa</a>
+                        <a href="https://www.equinoxvilla.com/" class="moneta-55-regular hover-item hover-line origin-center">Equinox Villa</a>
                     </div>
                     <div class="work-item">
-                        <a href="#" class="moneta-55-regular hover-item hover-line origin-center">TLNTHUB</a>
+                        <a href="https://www.tlnthub.com/" class="moneta-55-regular hover-item hover-line origin-center">TLNTHUB</a>
                     </div>
                     <div class="work-item">
-                        <a href="#" class="moneta-55-regular hover-item hover-line origin-center">Bluestreak Math</a>
+                        <a href="https://www.bluestreakmath.com/" class="moneta-55-regular hover-item hover-line origin-center">Bluestreak Math</a>
                     </div>
                     <div class="work-item">
-                        <a href="#" class="moneta-55-regular hover-item hover-line origin-center">DM Slider - Her App</a>
+                        <a href="https://weareher.com/dm-slider/" class="moneta-55-regular hover-item hover-line origin-center">DM Slider - Her App</a>
                     </div>
                 </div>
                 <div class="grotesk-22-light more">and many more...</div>

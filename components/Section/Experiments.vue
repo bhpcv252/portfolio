@@ -38,7 +38,7 @@
                                     GITHUB
                                 </div>
                                 <div class="link-wrapper">
-                                    <a href="#" class="btn" target="_blank">
+                                    <a href="https://github.com/stars/bhpcv252/lists/experiments" class="btn" target="_blank">
                                         <span>
                                             Visit
                                         </span>
@@ -56,7 +56,7 @@
                                     SHADERTOY
                                 </div>
                                 <div class="link-wrapper">
-                                    <a href="#" class="btn" target="_blank">
+                                    <a href="https://www.shadertoy.com/user/bhpcv252/" class="btn" target="_blank">
                                         <span>
                                             Visit
                                         </span>
@@ -74,7 +74,7 @@
                                     CODEPEN
                                 </div>
                                 <div class="link-wrapper">
-                                    <a href="#" class="btn" target="_blank">
+                                    <a href="https://codepen.io/bhpcv252/" class="btn" target="_blank">
                                         <span>
                                             Visit
                                         </span>
@@ -92,7 +92,7 @@
                                     P5.JS SKETCHES
                                 </div>
                                 <div class="link-wrapper">
-                                    <a href="#" class="btn" target="_blank">
+                                    <a href="https://editor.p5js.org/bhpcv252/sketches" class="btn" target="_blank">
                                         <span>
                                             Visit
                                         </span>
