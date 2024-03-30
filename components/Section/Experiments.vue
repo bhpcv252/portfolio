@@ -152,7 +152,7 @@ h2 {
         top: 0;
         background-color: variables.$textColor;
         transform: scale3d(1, 1, 1);
-        transition: transform 0.2s 0.2s cubic-bezier(0.61,0.04,0.45,0.96);
+        transition: transform 0.2s 0.2s variables.$easeSmooth;
         transform-origin: top;
     }
 
@@ -163,7 +163,7 @@ h2 {
         transform: translate(-50%, -50%);
         visibility: hidden;
         opacity: 0;
-        transition: visibility 0.2s linear, opacity 0.2s linear;
+        transition: visibility 0.2s variables.$easeSmooth, opacity 0.2s variables.$easeSmooth;
     }
 }
 
@@ -173,13 +173,13 @@ h2 {
 
         &::before {
             transform: scale3d(1, 0, 1);
-            transition: transform 0.2s cubic-bezier(0.61,0.04,0.45,0.96);
+            transition: transform 0.2s variables.$easeSmooth;
         }
 
         a {
             visibility: visible;
             opacity: 1;
-            transition: visibility 0.2s 0.2s linear, opacity 0.2s 0.2s linear;
+            transition: visibility 0.2s 0.2s variables.$easeSmooth, opacity 0.2s 0.2s variables.$easeSmooth;
         }
     }
 }
