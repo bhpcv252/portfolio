@@ -28,7 +28,7 @@
                     </GridCol>
                 </GridRow>
                 <div class="link-wrapper">
-                    <a href="#" class="btn" target="_blank">
+                    <a href="mailto:sayhellotosonu@gmail.com" class="btn" target="_blank">
                         <span>
                             Email Me
                         </span>

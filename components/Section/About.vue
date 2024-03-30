@@ -15,7 +15,7 @@
                             <span>About</span>
                             <div class="moneta-55-regular">Me</div>
                         </h2>
-                        <a href="#" class="btn" target="_blank">
+                        <a href="mailto:sayhellotosonu@gmail.com" class="btn" target="_blank">
                             <span>
                                 Email Me
                             </span>

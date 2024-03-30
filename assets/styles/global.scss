@@ -355,7 +355,7 @@ a.btn:active {
             height: 1px;
             background-color: variables.$textColor;
             transform: scale3d(1, 1, 1);
-            transition: transform 0.3s cubic-bezier(0.61,0.04,0.45,0.96);
+            transition: transform 0.3s variables.$easeSmooth;
         }
     }
 }
