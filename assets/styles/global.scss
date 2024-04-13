@@ -205,6 +205,10 @@
 html {
     scroll-behavior: smooth;
     font-size: utils.calcBaseVW(variables.$baseFont, variables.$baseWidth);
+
+    @media (max-width: #{variables.$baseMobileWidth}px) {
+        font-size: utils.calcBaseVW(variables.$baseMobileFont, variables.$baseMobileWidth);
+    }
 }
 
 body {
@@ -227,15 +231,15 @@ img {
 }
 
 .container {
-    padding: utils.pxToRem(30);
+    padding: utils.pxToRem(variables.$basePadding);
 }
 
 .container-h {
-    padding: 0 utils.pxToRem(30);
+    padding: 0 utils.pxToRem(variables.$basePadding);
 }
 
 .container-v {
-    padding: utils.pxToRem(30) 0;
+    padding: utils.pxToRem(variables.$basePadding) 0;
 }
 
 h1,
@@ -252,7 +256,6 @@ h3,
     font-family: 'Moneta', serif;
     font-size: utils.pxToRem(55);
     font-weight: normal;
-    text-transform: uppercase;
 }
 
 .grotesk-22-light {
@@ -315,7 +318,8 @@ a.btn:active {
 
 .hover-item {
 
-    &.hover-line, .hover-line {
+    &.hover-line,
+    .hover-line {
         position: relative;
 
         &::after {
@@ -328,7 +332,7 @@ a.btn:active {
             height: 1px;
             background-color: variables.$textColor;
             transform: scale3d(0, 1, 1);
-            transition: transform 0.3s cubic-bezier(0.61,0.04,0.45,0.96);
+            transition: transform 0.3s variables.$easeSmooth;
             transform-origin: left;
         }
 
@@ -342,7 +346,8 @@ a.btn:active {
 
 .hover-item:hover {
 
-    &.hover-line, .hover-line {
+    &.hover-line,
+    .hover-line {
         position: relative;
 
         &::after {
