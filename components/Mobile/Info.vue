@@ -175,6 +175,7 @@ h2,
         position: relative;
         font-size: 18px;
         line-height: 24px;
+        padding-bottom: 2px;
 
         &::after {
             content: '';
