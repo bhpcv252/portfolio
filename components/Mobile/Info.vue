@@ -163,7 +163,7 @@ h2,
     .btn {
         font-size: 36px;
         line-height: 36px;
-        padding: 14px 17px 10px 22px;
+        padding: 14px 17px 6px 22px;
 
         .icon {
             width: 34px;
@@ -175,6 +175,7 @@ h2,
         position: relative;
         font-size: 18px;
         line-height: 24px;
+        padding-bottom: 2px;
 
         &::after {
             content: '';
