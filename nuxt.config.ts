@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/styles/global.scss'],
-  modules: ['nuxt-svgo'],
+  modules: ['nuxt-svgo', '@nuxtjs/device'],
   svgo: {
     defaultImport: 'component',
   },

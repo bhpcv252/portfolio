@@ -1,6 +1,8 @@
 <script setup lang="ts">
-
 import type { NuxtError } from '#app'
+
+const { isDesktop } = useDevice();
+
 
 const props = defineProps({
     error: Object as () => NuxtError
@@ -15,9 +17,9 @@ const isHovering: Ref<boolean> = ref(false)
 </script>
 
 <template>
-    <div class="container">
+    <div class="container" v-if="isDesktop">
         <h2>{{ error?.statusCode }}</h2>
-        <p class="moneta-195-bold message">{{ error?.statusCode === 404? 'Page Not Found' : error?.statusMessage }}</p>
+        <p class="moneta-195-bold message">{{ error?.statusCode === 404 ? 'Page Not Found' : error?.statusMessage }}</p>
         <GridRow>
             <GridCol :from="6" :to="8">
                 <div class="centered-wrapper">
@@ -26,18 +28,21 @@ const isHovering: Ref<boolean> = ref(false)
                     </p>
                     <!-- Using opacity to hide to aviod flickering -->
                     <div class="img-wrapper">
-                        <img src="~/assets/images/cat-screaming.png" alt="Cat screaming to stop you"/>
-                        <img src="~/assets/images/cat-normal.png" alt="Cat looking at you" :class="{hide: isHovering}"/>
+                        <img src="~/assets/images/cat-screaming.png" alt="Cat screaming to stop you" />
+                        <img src="~/assets/images/cat-normal.png" alt="Cat looking at you"
+                            :class="{ hide: isHovering }" />
                     </div>
                     <p class="para-bottom">
-                        Keep looking or <NuxtLink to="/" @mouseover="isHovering = true" @mouseleave="isHovering = false">go home</NuxtLink>
+                        Keep looking or <NuxtLink to="/" @mouseover="isHovering = true"
+                            @mouseleave="isHovering = false">go home</NuxtLink>
                     </p>
                 </div>
             </GridCol>
         </GridRow>
-        <PlusIcon class="top-right"/>
-        <PlusIcon class="bottom-left"/>
+        <PlusIcon class="top-right" />
+        <PlusIcon class="bottom-left" />
     </div>
+    <MobileInfo v-else />
 </template>
 
 <style lang="scss" scoped>
@@ -48,7 +53,8 @@ const isHovering: Ref<boolean> = ref(false)
     align-items: center;
 }
 
-h2, .message {
+h2,
+.message {
     position: absolute;
 }
 
@@ -106,5 +112,4 @@ a {
         background-color: variables.$textColor;
     }
 }
-
 </style>

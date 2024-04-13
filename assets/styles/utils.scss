@@ -11,21 +11,25 @@
   @return ($result * 1rem);
 }
 
-@function pxToVH($px, $baseHeight: variables.$baseHeight) {
-  $result: math.div($px, $baseHeight);
-  @return ($result * 100vh);
-}
-
-@function pxToRemTab($px, $baseTabFont: variables.$baseTabFont) {
-  $result: math.div($px, $baseTabFont);
-  @return ($result * 1rem);
-}
-
 @function pxToRemMobile($px, $baseMobileFont: variables.$baseMobileFont) {
   $result: math.div($px, $baseMobileFont);
   @return ($result * 1rem);
 }
 
+@function pxToVH($px, $baseHeight: variables.$baseHeight) {
+  $result: math.div($px, $baseHeight);
+  @return ($result * 100vh);
+}
+
+@function pxToVHMobile($px, $baseMobileHeight: variables.$baseMobileHeight) {
+  $result: math.div($px, $baseMobileHeight);
+  @return ($result * 100vh);
+}
+
 @function placeAt($at, $padding: variables.$basePadding) {
   @return pxToRem((variables.$baseColSize * ($at - 1)) + $padding);
+}
+
+@function placeAtMobile($at, $padding: variables.$baseMobilePadding) {
+  @return pxToRemMobile((variables.$baseMobileColSize * ($at - 1)) + $padding);
 }

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 
 
-
 </script>
 
 <template>
@@ -9,9 +8,9 @@
         <div class="container">
             <PlusIcon class="center" />
             <h1>
-                <div>Sonu</div>
-                <div class="line"></div>
-                <div>Singh</div>
+                <span>Sonu</span>
+                <span class="line"></span>
+                <span>Singh</span>
             </h1>
             <div class="menu-wrapper">
                 <div class="menu-info jump grotesk-22-light">
@@ -73,7 +72,8 @@ h1 {
 
 .menu-wrapper {
 
-    &>div, &>a{
+    &>div,
+    &>a {
         position: absolute;
     }
 
