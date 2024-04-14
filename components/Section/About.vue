@@ -29,14 +29,14 @@
                 <GridCol :from="7" :to="12" class="align-bottom">
                     <div class="right-panel">
                         <p>
-                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising
-                            pain was born and I will give you a complete account of the system, and expound the actual
-                            teachings of the great explorer of the truth, the master-builder of human happiness.
+                            I'm a seasoned <em>web developer</em> with a knack for crafting stunning frontend and rock-solid backend solutions.
+                            Over the years, I've had the privilege of collaborating with notable clients like Equinox and Tlnthub,
+                            bringing their digital visions to life with my expertise.
                         </p>
                         <p>
-                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising
-                            pain was born and I will give you a complete account of the system, and expound the actual
-                            teachings of the great explorer of the truth, the master-builder of human happiness.
+                            Right now, I'm diving deep into the exciting worlds of machine learning and iOS development.
+                            It's a wild ride, but I'm loving every moment of it. There's something incredibly satisfying
+                            about learning new skills and pushing the boundaries of what I can do.
                         </p>
                     </div>
                 </GridCol>
