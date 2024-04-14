@@ -19,11 +19,9 @@
                 <GridRow class="para-wrapper">
                     <GridCol :from="8" :to="12">
                         <p>
-                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising
-                            pain
-                            was born and I will give you a complete account of the system, and expound the actual
-                            teachings
-                            of the great explorer of the truth, the master-builder of human happiness
+                            Coz' at the end of the day, it's about pushing boundaries and making an impact.
+                            Whether it's through elegant code or cutting-edge tech, I'm here to create something awesome.
+                            Let's build something great together.
                         </p>
                     </GridCol>
                 </GridRow>

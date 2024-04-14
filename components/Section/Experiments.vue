@@ -15,16 +15,14 @@
                 <GridRow>
                     <GridCol :from="2" :to="6">
                         <p>
-                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising
-                            pain
-                            was born and I will give you a complete account of the system.
+                            I like to experiment with new <em>animations</em>, <em>transitions</em>, and <em>3D elements</em>, constantly
+                            exploring their potential to elevate the user experience in future projects.
                         </p>
                     </GridCol>
                     <GridCol :from="8" :to="12">
                         <p>
-                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising
-                            pain
-                            was born and I will give you a complete account of the system.
+                            From implementing subtle transitions to incorporating immersive 3D effects,
+                            I'm always looking for innovative ways to push the boundaries of digital design.
                         </p>
                     </GridCol>
                 </GridRow>
