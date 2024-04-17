@@ -3,7 +3,7 @@
 
 Design File: [Figma](https://www.figma.com/file/p3bORZ5sWLD3mg4WVEtaSa/folio-design?type=design&node-id=0%3A1&t=OsGSOCuRUm5tMaVZ-1)
 
-Live: [https://portfolio-psi-sooty-50.vercel.app/](https://portfolio-psi-sooty-50.vercel.app/) (WIP)
+Live: [https://sonusfolio.com/](https://sonusfolio.com/) (WIP)
 
 -------------------------
 
