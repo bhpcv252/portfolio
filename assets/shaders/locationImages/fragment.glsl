@@ -6,6 +6,8 @@ varying vec3 vPosition;
 uniform sampler2D image;
 uniform float time;
 uniform float index;
+uniform float mouseSpeedSmoother;
+
 
 void main() {
     vec4 imageTexture = texture2D(image, vUv);

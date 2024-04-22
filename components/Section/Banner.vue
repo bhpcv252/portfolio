@@ -3,13 +3,14 @@ import { ref, onMounted } from 'vue'
 import type { Ref } from 'vue'
 import { gsap } from 'gsap'
 import { CustomEase } from "gsap/CustomEase";
+import { Observer } from "gsap/Observer";
 import * as THREE from 'three'
 import { locationImages } from '~/utils/locationImages';
 import type { LocationImageMeshData, LocationImageMeshRandomPosition } from '~/types'
 import fShader from '~/assets/shaders/locationImages/fragment.glsl';
 import vShader from '~/assets/shaders/locationImages/vertex.glsl';
 
-gsap.registerPlugin(CustomEase);
+gsap.registerPlugin(CustomEase, Observer);
 
 CustomEase.create("throwEase", ".17,.88,.3,.98");
 CustomEase.create("smoothEase", ".61,.04,.45,.96");
@@ -25,11 +26,16 @@ const locationModal: Ref<HTMLDivElement | null> = ref(null);
 const imagesMeshData: LocationImageMeshData[] = [];
 const imagesMeshRandomPosition: LocationImageMeshRandomPosition[] = [];
 const LIMITER: number = 0.005;
+let mouseMoveSpeed: number = 0;
+let mouseSpeedSmoother:number = 0;
+
 const isAnimationFinished: {
-    status: boolean
+    status: boolean,
+    ended: boolean
     time: number
 } = {
     status: false,
+    ended: false,
     time: 0
 };
 
@@ -66,6 +72,9 @@ for (let i = 0; i < locationImages.length; i++) {
             },
             index: {
                 value: i
+            },
+            mouseSpeedSmoother: {
+                value: mouseSpeedSmoother
             }
         },
         fragmentShader: fShader,
@@ -101,7 +110,13 @@ scene.add(group)
 const animationTL = gsap.timeline({
     paused: true,
     onStart: () => {
+        mouseMoveSpeed = 0;
+        mouseSpeedSmoother = 0;
         isAnimationFinished.status = false
+        isAnimationFinished.ended = false
+    },
+    onComplete: () => {
+        isAnimationFinished.ended = true
     },
     defaults: {
         ease: "throwEase"
@@ -122,30 +137,29 @@ animationTL.to(imagesMeshData, {
     }
 }, 0).to(imagesMeshData, {
     x: (i) => {
-        return i*1.2 - 5
+        return i * 1.2 - 5
     },
     y: (i) => {
         return 0 + imagesMeshRandomPosition[i].y
     },
-    z: (i) => {
-        return 0.7
-    },
+    z: 0.7,
     rotationZ: 0,
     duration: 1.5,
     ease: "smoothEase"
 });
 
-const renderScene = (time: number, deltaTime: number, frame: number) => {
 
-    let scrollTime = time - isAnimationFinished.time;
+const renderScene = (time: number, deltaTime: number, frame: number) => {
+    mouseMoveSpeed += mouseSpeedSmoother;
+    let scrollTime = time - isAnimationFinished.time + mouseMoveSpeed;
 
     for (let i = 0; i < locationImages.length; i++) {
-        if(isAnimationFinished.status) {
-            let posX = (imagesMeshData[i].x - scrollTime * 0.1) % (imagesMeshData.length*1.2);
-            if(posX <= -5) {
-                posX = posX + (imagesMeshData.length*1.2);
-            } 
-            planes[i].position.set(posX, imagesMeshData[i].y + Math.sin(imagesMeshData[i].y * scrollTime)* 0.1, imagesMeshData[i].z);
+        if (isAnimationFinished.status) {
+            let posX = (imagesMeshData[i].x - scrollTime * 0.1) % (imagesMeshData.length * 1.2);
+            if (posX <= -5) {
+                posX = posX + (imagesMeshData.length * 1.2);
+            }
+            planes[i].position.set(posX, imagesMeshData[i].y + Math.sin(imagesMeshData[i].y * scrollTime) * 0.1, imagesMeshData[i].z);
         }
         else {
             planes[i].position.set(imagesMeshData[i].x, imagesMeshData[i].y, imagesMeshData[i].z);
@@ -153,7 +167,8 @@ const renderScene = (time: number, deltaTime: number, frame: number) => {
         }
         planes[i].scale.set(imagesMeshData[i].scale, imagesMeshData[i].scale, imagesMeshData[i].scale);
         planes[i].rotation.set(0, 0, imagesMeshData[i].rotationZ);
-        materials[i].uniforms.time.value = time;
+        materials[i].uniforms.time.value = time - isAnimationFinished.time + mouseMoveSpeed*0.2;
+        materials[i].uniforms.mouseSpeedSmoother.value = mouseSpeedSmoother;
 
     }
 
@@ -165,6 +180,10 @@ const renderScene = (time: number, deltaTime: number, frame: number) => {
     }
 
     renderer.render(scene, camera);
+
+    console.clear()
+    console.log(mouseSpeedSmoother)
+    mouseSpeedSmoother *= 0.98
 }
 
 const resizeCanvas = (renderer: THREE.WebGLRenderer) => {
@@ -210,6 +229,15 @@ const setLocationTime = (time: number, deltaTime: number, frame: number) => {
 
 onMounted(() => {
     locationModal?.value?.appendChild(renderer.domElement);
+    Observer.create({
+        type: "pointer",
+        onMove: (self) => {
+            if(isAnimationFinished.ended) {
+                mouseSpeedSmoother += Math.abs(self.deltaX) * 0.02;
+                mouseMoveSpeed += Math.sqrt(Math.abs(self.deltaX*self.deltaX + self.deltaY*self.deltaY))* 0.001;
+            }
+        }
+    })
     gsap.ticker.add(setLocationTime);
     gsap.ticker.add(renderScene);
 })
