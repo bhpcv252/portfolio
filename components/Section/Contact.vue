@@ -40,7 +40,7 @@
                 <div class="work-item hover-item hover-line">
                     <a href="#home" class="moneta-55-regular">Home</a>
                 </div>
-                <PlusIcon class="relative"/>
+                <PlusIcon class="relative" />
                 <div class="work-item hover-item hover-line">
                     <a href="#about" class="moneta-55-regular">About</a>
                 </div>
@@ -48,7 +48,7 @@
                 <div class="work-item hover-item hover-line">
                     <a href="#work" class="moneta-55-regular">Work</a>
                 </div>
-                <PlusIcon class="relative"/>
+                <PlusIcon class="relative" />
                 <div class="work-item hover-item hover-line">
                     <a href="#experiments" class="moneta-55-regular">Experiments</a>
                 </div>
@@ -78,6 +78,7 @@ h2 {
 
     span {
         position: relative;
+        display: inline-block;
     }
 }
 
