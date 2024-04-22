@@ -1,3 +1,5 @@
+import glsl from 'vite-plugin-glsl'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -13,7 +15,8 @@ export default defineNuxtConfig({
           additionalData: '@use "~/assets/styles/utils.scss" as utils; @use "~/assets/styles/variables.scss" as variables;'
         }
       }
-    }
+    },
+    plugins: [glsl()],
   },
   app: {
     head: {
