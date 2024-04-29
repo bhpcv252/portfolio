@@ -21,6 +21,8 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [
+        { name: 'description', content: "I'm a seasoned web developer with a knack for crafting stunning frontend and rock-solid backend solutions. Over the years, I've had the privilege of collaborating with notable clients like Equinox and Tlnthub, bringing their digital visions to life with my expertise." },
+        { name: 'ogDescription', content: "I'm a seasoned web developer with a knack for crafting stunning frontend and rock-solid backend solutions. Over the years, I've had the privilege of collaborating with notable clients like Equinox and Tlnthub, bringing their digital visions to life with my expertise." },
         { name: 'msapplication-TileColor', content: '#f8f8f4' },
         { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
         { name: 'theme-color', content: '#f8f8f4' }
