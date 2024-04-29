@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 
+// this page is not in use right now....
+
 const { isDesktop } = useDevice();
 
 
@@ -26,7 +28,7 @@ const isHovering: Ref<boolean> = ref(false)
                     <p class="para-top">
                         Nothing to see here except a cat chilling
                     </p>
-                    <!-- Using opacity to hide to aviod flickering -->
+                    <!-- Using opacity to aviod flickering -->
                     <div class="img-wrapper">
                         <img src="~/assets/images/cat-screaming.png" alt="Cat screaming to stop you" />
                         <img src="~/assets/images/cat-normal.png" alt="Cat looking at you"

@@ -6,7 +6,7 @@ varying vec3 vPosition;
 uniform sampler2D image;
 uniform float time;
 uniform float index;
-uniform float mouseSpeedSmoother;
+uniform float mouseMoveReducer;
 
 
 void main() {
