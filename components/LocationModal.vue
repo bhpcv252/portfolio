@@ -25,7 +25,7 @@ const imagesMeshData: {
     x: number,
     y: number,
     z: number,
-    scale: 0,
+    scale: number,
     rotationZ: number
 }[] = [];
 const imagesMeshRandomYPosition: number[] = [];
