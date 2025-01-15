@@ -4,10 +4,19 @@ import glsl from 'vite-plugin-glsl'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/styles/global.scss'],
-  modules: ['nuxt-svgo', '@nuxtjs/device'],
+  modules: ['nuxt-svgo', '@nuxtjs/device', '@nuxt/content'],
+
   svgo: {
     defaultImport: 'component',
   },
+
+  content: {
+    markdown: {
+      remarkPlugins: ['remark-math'],
+      rehypePlugins: ['rehype-katex']
+    }
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -18,6 +27,7 @@ export default defineNuxtConfig({
     },
     plugins: [glsl()],
   },
+
   app: {
     head: {
       meta: [
@@ -44,5 +54,7 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: '/manifest.json' }
       ]
     }
-  }
+  },
+
+  compatibilityDate: '2025-01-15'
 })
