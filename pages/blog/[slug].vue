@@ -48,8 +48,6 @@
           </div>
         </div>
 
-        <hr />
-
         <div class="markdown-body">
           <ContentRendererMarkdown :value="post" />
         </div>
@@ -82,7 +80,11 @@ onMounted(async () => {
 <style lang="scss" scoped>
 .container {
   .description {
-    margin: 1rem 0;
+    margin: 0.5rem 0 1rem 0;
+
+    @media (max-width: #{variables.$baseMobileWidth}px) {
+      margin: 0.4rem 0;
+    }
   }
 
   .post-fields {
@@ -90,6 +92,13 @@ onMounted(async () => {
     align-items: flex-end;
     justify-content: space-between;
     gap: 2rem;
+  }
+
+  @media (max-width: #{variables.$baseMobileWidth}px) {
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
   }
 }
 </style>
