@@ -82,10 +82,10 @@ const hideElements = computed(() => isLocationHovered.value ? 'hide' : '');
                     <img src="~/assets/images/about-thumb.png" alt="About" />
                     <h3 class="hover-line">About</h3>
                 </a>
-                <a href="#experiments" class="menu-item item-3 hover-item">
+                <NuxtLink to="#experiments" class="menu-item item-3 hover-item">
                     <img src="~/assets/images/experiments-thumb.png" alt="Experiments" />
                     <h3 class="hover-line">Experiments</h3>
-                </a>
+                </NuxtLink>
                 <a href="#contact" class="menu-item item-4 hover-item">
                     <img src="~/assets/images/catch-me-thumb.png" alt="Catch Me" />
                     <h3 class="hover-line">Catch Me</h3>

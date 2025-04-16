@@ -68,7 +68,6 @@ let group: THREE.Group = new THREE.Group();
 let planes: THREE.Mesh[] = [];
 
 for (let i: number = 0; i < locationImages.length; i++) {
-    console.log(locationImages[i]);
     const texture: THREE.Texture = new THREE.TextureLoader().load(locationImages[i]);
 
     materials[i] = new THREE.ShaderMaterial({

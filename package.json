@@ -10,11 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "github-markdown-css": "^5.8.1",
     "gsap": "^3.12.5",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^5.1.1",
     "three": "^0.163.0",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.13.4",
     "@nuxtjs/device": "^3.1.1",
     "@types/three": "^0.163.0",
     "nuxt": "^3.11.1",

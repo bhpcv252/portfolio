@@ -1,399 +1,487 @@
-@import 'reset';
-
+@use "reset";
 
 // Moneta Font -----------
 
 @font-face {
-    font-family: 'Moneta';
-    src: url('/fonts/moneta/Moneta-Light.eot');
-    src: local('Moneta'), local('Moneta Light'),
-        url('/fonts/moneta/Moneta-Light.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/moneta/Moneta-Light.woff2') format('woff2'),
-        url('/fonts/moneta/Moneta-Light.woff') format('woff'),
-        url('/fonts/moneta/Moneta-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Moneta";
+  src: url("/fonts/moneta/Moneta-Light.eot");
+  src:
+    local("Moneta"),
+    local("Moneta Light"),
+    url("/fonts/moneta/Moneta-Light.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/moneta/Moneta-Light.woff2") format("woff2"),
+    url("/fonts/moneta/Moneta-Light.woff") format("woff"),
+    url("/fonts/moneta/Moneta-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Moneta';
-    src: url('/fonts/moneta/Moneta-Regular.eot');
-    src: local('Moneta'), local('Moneta Regular'),
-        url('/fonts/moneta/Moneta-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/moneta/Moneta-Regular.woff2') format('woff2'),
-        url('/fonts/moneta/Moneta-Regular.woff') format('woff'),
-        url('/fonts/moneta/Moneta-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Moneta";
+  src: url("/fonts/moneta/Moneta-Regular.eot");
+  src:
+    local("Moneta"),
+    local("Moneta Regular"),
+    url("/fonts/moneta/Moneta-Regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/moneta/Moneta-Regular.woff2") format("woff2"),
+    url("/fonts/moneta/Moneta-Regular.woff") format("woff"),
+    url("/fonts/moneta/Moneta-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Moneta';
-    src: url('/fonts/moneta/Moneta-Bold.eot');
-    src: local('Moneta'), local('Moneta Bold'),
-        url('/fonts/moneta/Moneta-Bold.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/moneta/Moneta-Bold.woff2') format('woff2'),
-        url('/fonts/moneta/Moneta-Bold.woff') format('woff'),
-        url('/fonts/moneta/Moneta-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Moneta";
+  src: url("/fonts/moneta/Moneta-Bold.eot");
+  src:
+    local("Moneta"),
+    local("Moneta Bold"),
+    url("/fonts/moneta/Moneta-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/moneta/Moneta-Bold.woff2") format("woff2"),
+    url("/fonts/moneta/Moneta-Bold.woff") format("woff"),
+    url("/fonts/moneta/Moneta-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Moneta';
-    src: url('/fonts/moneta/Moneta-Black.eot');
-    src: local('Moneta'), local('Moneta Black'),
-        url('/fonts/moneta/Moneta-Black.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/moneta/Moneta-Black.woff2') format('woff2'),
-        url('/fonts/moneta/Moneta-Black.woff') format('woff'),
-        url('/fonts/moneta/Moneta-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Moneta";
+  src: url("/fonts/moneta/Moneta-Black.eot");
+  src:
+    local("Moneta"),
+    local("Moneta Black"),
+    url("/fonts/moneta/Moneta-Black.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/moneta/Moneta-Black.woff2") format("woff2"),
+    url("/fonts/moneta/Moneta-Black.woff") format("woff"),
+    url("/fonts/moneta/Moneta-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
-
 
 // Neue Haas Grotesk Display Pro Font -----------
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Ultra Thin'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXXThin.ttf') format('truetype');
-    font-weight: 50;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Ultra Thin"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXXThin.ttf") format("truetype");
+  font-weight: 50;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Ultra Thin Italic'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXXThinItalic.ttf') format('truetype');
-    font-weight: 50;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Ultra Thin Italic"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXXThinItalic.ttf") format("truetype");
+  font-weight: 50;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Thin'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXThin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Thin"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXThin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Thin Italic'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXThinItalic.ttf') format('truetype');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Thin Italic"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayXThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Extra Light'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayThin.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Extra Light"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayThin.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Extra Light Italic'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayThinItalic.ttf') format('truetype');
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Extra Light Italic"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayThinItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Light'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayLight.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Light"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Light Italic'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayLightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Light Italic"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayLightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Roman'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayRoman.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Roman"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayRoman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Roman Italic'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayRomanItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Roman Italic"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayRomanItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Medium'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayMedium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Medium"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Medium Italic'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayMediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Medium Italic"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayMediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Bold'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Bold"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Bold Italic'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Bold Italic"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Black'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBlack.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Black"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBlack.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: local('Neue Haas Grotesk Display Pro'), local('Neue Haas Grotesk Display Pro Black Italic'),
-        url('/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBlackItalic.ttf') format('truetype');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:
+    local("Neue Haas Grotesk Display Pro"),
+    local("Neue Haas Grotesk Display Pro Black Italic"),
+    url("/fonts/neue-haas-grotesk-display-pro/NeueHaasDisplayBlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
 }
 
 html {
-    scroll-behavior: smooth;
-    font-size: utils.calcBaseVW(variables.$baseFont, variables.$baseWidth);
+  scroll-behavior: smooth;
+  font-size: utils.calcBaseVW(variables.$baseFont, variables.$baseWidth);
 
-    @media (max-width: #{variables.$baseMobileWidth}px) {
-        font-size: utils.calcBaseVW(variables.$baseMobileFont, variables.$baseMobileWidth);
-    }
+  @media (max-width: #{variables.$baseMobileWidth}px) {
+    font-size: utils.calcBaseVW(variables.$baseMobileFont,
+        variables.$baseMobileWidth );
+  }
 }
 
 body {
-    font-size: 1rem;
-    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
-    font-weight: 300;
-    position: relative;
-    min-height: 100%;
-    color: variables.$textColor;
-    background-color: variables.$bgColor;
+  font-size: 1rem;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-weight: 300;
+  position: relative;
+  min-height: 100%;
+  color: variables.$textColor;
+  background-color: variables.$bgColor;
 }
 
 ::selection {
-    background-color: variables.$textColor;
-    color: variables.$bgColor;
+  background-color: variables.$textColor;
+  color: variables.$bgColor;
 }
 
 img {
-    background-blend-mode: difference;
+  background-blend-mode: difference;
 }
 
 .container {
-    padding: utils.pxToRem(variables.$basePadding);
+  padding: utils.pxToRem(variables.$basePadding);
 }
 
 .container-h {
-    padding: 0 utils.pxToRem(variables.$basePadding);
+  padding: 0 utils.pxToRem(variables.$basePadding);
 }
 
 .container-v {
-    padding: utils.pxToRem(variables.$basePadding) 0;
+  padding: utils.pxToRem(variables.$basePadding) 0;
 }
 
 h1,
 h2,
 .moneta-195-bold {
-    font-family: 'Moneta', serif;
-    font-size: utils.pxToRem(195);
-    font-weight: bold;
+  font-family: "Moneta", serif;
+  font-size: utils.pxToRem(195);
+  font-weight: bold;
 }
 
 h3,
 .moneta-55-regular,
 .btn {
-    font-family: 'Moneta', serif;
-    font-size: utils.pxToRem(55);
-    font-weight: normal;
+  font-family: "Moneta", serif;
+  font-size: utils.pxToRem(55);
+  font-weight: normal;
+}
+
+h4 {
+  font-family: "Moneta", serif;
+  font-size: utils.pxToRem(45);
+  font-weight: normal;
+}
+
+h5 {
+  font-family: "Moneta", serif;
+  font-size: utils.pxToRem(40);
+  font-weight: normal;
+}
+
+h6 {
+  font-family: "Moneta", serif;
+  font-size: utils.pxToRem(36);
+  font-weight: normal;
 }
 
 .grotesk-22-light {
-    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
-    font-weight: 300;
-    font-size: utils.pxToRem(22);
-    color: variables.$secColor;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-weight: 300;
+  font-size: utils.pxToRem(22);
+  color: variables.$secColor;
 }
 
 a:link,
 a:visited,
 a:hover,
 a:active {
-    color: variables.$textColor;
+  color: variables.$textColor;
 }
 
 p {
-    line-height: utils.pxToRem(36);
+  line-height: utils.pxToRem(36);
 }
 
 .split-heading {
-    display: flex;
-    gap: utils.pxToRem(30);
-    align-items: baseline;
+  display: flex;
+  gap: utils.pxToRem(30);
+  align-items: baseline;
 }
 
 .btn {
-    padding: utils.pxToRem(20) utils.pxToRem(22) utils.pxToRem(10) utils.pxToRem(42);
-    background-color: variables.$textColor;
-    color: variables.$bgColor;
-    text-transform: capitalize;
-    border-radius: utils.pxToRem(50);
-    display: inline-flex;
-    gap: utils.pxToRem(100);
-    align-items: baseline;
+  padding: utils.pxToRem(20) utils.pxToRem(22) utils.pxToRem(10) utils.pxToRem(42);
+  background-color: variables.$textColor;
+  color: variables.$bgColor;
+  text-transform: capitalize;
+  border-radius: utils.pxToRem(50);
+  display: inline-flex;
+  gap: utils.pxToRem(100);
+  align-items: baseline;
 
-    span {
-        display: inline-block;
+  span {
+    display: inline-block;
+  }
+
+  .icon {
+    width: utils.pxToRem(45);
+
+    &.external {
+      transform: rotate(-27.38deg);
     }
 
-    .icon {
-        width: utils.pxToRem(45);
-
-        &.external {
-            transform: rotate(-27.38deg);
-        }
-
-        svg {
-            width: 100%;
-        }
+    svg {
+      width: 100%;
     }
+  }
 }
 
 a.btn:link,
 a.btn:visited,
 a.btn:hover,
 a.btn:active {
-    color: variables.$bgColor;
+  color: variables.$bgColor;
 }
 
 .hover-item {
 
-    &.hover-line,
-    .hover-line {
-        position: relative;
+  &.hover-line,
+  .hover-line {
+    position: relative;
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 1px;
-            background-color: variables.$textColor;
-            transform: scale3d(0, 1, 1);
-            transition: transform 0.3s variables.$easeSmooth;
-            transform-origin: left;
-        }
-
-        &.origin-center {
-            &::after {
-                transform-origin: center;
-            }
-        }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: variables.$textColor;
+      transform: scale3d(0, 1, 1);
+      transition: transform 0.3s variables.$easeSmooth;
+      transform-origin: left;
     }
+
+    &.origin-center {
+      &::after {
+        transform-origin: center;
+      }
+    }
+  }
 }
 
 .hover-item:hover {
 
-    &.hover-line,
-    .hover-line {
-        position: relative;
+  &.hover-line,
+  .hover-line {
+    position: relative;
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 1px;
-            background-color: variables.$textColor;
-            transform: scale3d(1, 1, 1);
-            transition: transform 0.3s variables.$easeSmooth;
-        }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: variables.$textColor;
+      transform: scale3d(1, 1, 1);
+      transition: transform 0.3s variables.$easeSmooth;
     }
+  }
 }
 
 canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .rotate-45 {
-    transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
 }
 
+.markdown-body {
+  max-width: 1070px;
+  margin: 0 !important;
+  background-color: variables.$bgColor !important;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    border-bottom: 1px solid #ccc !important;
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: variables.$textColor !important;
+    }
+  }
+}
+
+.max-width {
+  max-width: 1070px;
+}
+
+hr {
+  border-top: 1px solid #ccc;
+  margin: utils.pxToRem(40) 0 !important;
+}
 
 @keyframes flickerAnimation {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    25% {
-        opacity: 0.5;
-    }
+  25% {
+    opacity: 0.5;
+  }
 
-    50% {
-        opacity: 0.1;
-    }
+  50% {
+    opacity: 0.1;
+  }
 
-    75% {
-        opacity: 0.5;
-    }
+  75% {
+    opacity: 0.5;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
