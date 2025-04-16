@@ -40,8 +40,14 @@
           </select>
 
           <!-- Date Filter -->
-          <input v-model="startDate" type="date" @change="changePage(1)" />
-          <input v-model="endDate" type="date" @change="changePage(1)" />
+          <label>
+            From
+            <input v-model="startDate" type="date" @change="changePage(1)" />
+          </label>
+          <label>
+            To
+            <input v-model="endDate" type="date" @change="changePage(1)" />
+          </label>
         </div>
         <div class="moneta-55-regular page-title">
           <span class="line"></span>
@@ -263,12 +269,27 @@ const changePage = (page) => {
         height: 1px;
         width: utils.pxToRem(60);
         background-color: variables.$textColor;
+
+        @media (max-width: #{variables.$baseMobileWidth}px) {
+          display: none;
+        }
       }
+    }
+
+    @media (max-width: #{variables.$baseMobileWidth}px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 0;
     }
   }
 
   .post {
     margin: utils.pxToRem(120) 0;
+
+    @media (max-width: #{variables.$baseMobileWidth}px) {
+      margin: utils.pxToRem(70) 0;
+    }
   }
 
   .post-title {
@@ -290,11 +311,39 @@ const changePage = (page) => {
   input,
   select {
     padding: utils.pxToRem(10);
+    background-color: white;
+    border-radius: 0;
     font-size: 1rem;
 
     &:focus {
       outline-color: variables.$textColor;
     }
+  }
+
+  @media (max-width: #{variables.$baseMobileWidth}px) {
+    h1 {
+      font-size: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px 0;
+      gap: 10px;
+      font-weight: bold;
+
+      span {
+        display: inline-block;
+      }
+
+      .line {
+        height: 1px;
+        width: 100%;
+        background-color: variables.$textColor;
+      }
+    }
+  }
+
+  label input {
+    margin-left: 0.4rem;
   }
 }
 </style>
