@@ -4,11 +4,48 @@
       <ContentRenderer v-if="post" :value="post">
         <Title>{{ post.title }}</Title>
         <h1>{{ post.title }}</h1>
-        <p>{{ post.date }} - {{ post.author }}</p>
-        <p>Tags: {{ post.tags.join(", ") }}</p>
-        <p>Category: {{ post.category }}</p>
-        <ContentRendererMarkdown :value="post" />
+        <p class="max-width description">{{ post.description }}</p>
+        <p class="grotesk-22-light">{{ post.date }}</p>
+        <p class="grotesk-22-light">
+          Tags:
+          <span v-for="(tag, index) in post.tags" :key="tag">
+            <nuxt-link
+              :to="{
+                path: '/blog',
+                query: {
+                  page: 1,
+                  tag: tag,
+                },
+              }"
+            >
+              {{ tag }}
+            </nuxt-link>
+            <span v-if="index < post.tags.length - 1">, </span>
+          </span>
+        </p>
+
+        <p class="grotesk-22-light">
+          Category:
+          <nuxt-link
+            :to="{
+              path: '/blog',
+              query: {
+                page: 1,
+                category: post.category,
+              },
+            }"
+          >
+            {{ post.category }}
+          </nuxt-link>
+        </p>
+
+        <hr />
+
+        <div class="markdown-body">
+          <ContentRendererMarkdown :value="post" />
+        </div>
       </ContentRenderer>
+
       <p v-else>Loading...</p>
     </article>
   </div>
@@ -17,6 +54,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
+import "github-markdown-css/github-markdown-light.css";
 
 useHead({
   titleTemplate: (titleChunk) => {
@@ -34,10 +72,8 @@ onMounted(async () => {
 
 <style lang="scss" scoped>
 .container {
-  h2 {
-    font-family: "Moneta", serif;
-    font-size: utils.pxToRem(135) !important;
-    font-weight: bold;
+  .description {
+    margin: 1rem 0;
   }
 }
 </style>

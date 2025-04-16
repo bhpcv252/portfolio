@@ -432,6 +432,38 @@ canvas {
   transform: rotate3d(0, 0, 1, 45deg);
 }
 
+.markdown-body {
+  max-width: 1070px;
+  margin: 0 !important;
+  background-color: variables.$bgColor !important;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    border-bottom: 1px solid #ccc !important;
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: variables.$textColor !important;
+    }
+  }
+}
+
+.max-width {
+  max-width: 1070px;
+}
+
+hr {
+  border-top: 1px solid #ccc;
+  margin: utils.pxToRem(40) 0 !important;
+}
+
 @keyframes flickerAnimation {
   0% {
     opacity: 0;

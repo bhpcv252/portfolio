@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "github-markdown-css": "^5.8.1",
     "gsap": "^3.12.5",
     "rehype-katex": "^7.0.1",
     "remark-math": "^5.1.1",

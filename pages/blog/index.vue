@@ -49,9 +49,11 @@
         </div>
       </div>
 
+      <hr />
+
       <!-- Posts List -->
       <div v-if="posts.length" class="posts">
-        <div v-for="post in posts" :key="post._path" class="post">
+        <div v-for="post in posts" :key="post._path" class="post max-width">
           <nuxt-link :to="post._path">
             <h3 class="post-title">{{ post.title }}</h3>
             <p class="post-description">{{ post.description }}</p>
@@ -265,12 +267,8 @@ const changePage = (page) => {
     }
   }
 
-  .posts {
-    max-width: 70%;
-  }
-
   .post {
-    margin: utils.pxToRem(40) 0;
+    margin: utils.pxToRem(120) 0;
   }
 
   .post-title {
