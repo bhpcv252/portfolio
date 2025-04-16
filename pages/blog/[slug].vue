@@ -5,39 +5,48 @@
         <Title>{{ post.title }}</Title>
         <h1>{{ post.title }}</h1>
         <p class="max-width description">{{ post.description }}</p>
-        <p class="grotesk-22-light">{{ post.date }}</p>
-        <p class="grotesk-22-light">
-          Tags:
-          <span v-for="(tag, index) in post.tags" :key="tag">
-            <nuxt-link
-              :to="{
-                path: '/blog',
-                query: {
-                  page: 1,
-                  tag: tag,
-                },
-              }"
-            >
-              {{ tag }}
-            </nuxt-link>
-            <span v-if="index < post.tags.length - 1">, </span>
-          </span>
-        </p>
-
-        <p class="grotesk-22-light">
-          Category:
-          <nuxt-link
-            :to="{
-              path: '/blog',
-              query: {
-                page: 1,
-                category: post.category,
-              },
-            }"
-          >
-            {{ post.category }}
-          </nuxt-link>
-        </p>
+        <div class="post-fields max-width">
+          <div>
+            <p class="grotesk-22-light">
+              {{ post.date }} &middot; by
+              <nuxt-link to="/blog">{{ post.author }}</nuxt-link>
+            </p>
+            <p class="grotesk-22-light">
+              Tags:
+              <span v-for="(tag, index) in post.tags" :key="tag">
+                <nuxt-link
+                  :to="{
+                    path: '/blog',
+                    query: {
+                      page: 1,
+                      tag: tag,
+                    },
+                  }"
+                >
+                  {{ tag }}
+                </nuxt-link>
+                <span v-if="index < post.tags.length - 1">, </span>
+              </span>
+            </p>
+            <p class="grotesk-22-light">
+              Category:
+              <nuxt-link
+                :to="{
+                  path: '/blog',
+                  query: {
+                    page: 1,
+                    category: post.category,
+                  },
+                }"
+              >
+                {{ post.category }}
+              </nuxt-link>
+            </p>
+          </div>
+          <div class="moneta-55-regular">
+            <nuxt-link to="/blog"> cd ../ </nuxt-link>
+          </div>
+        </div>
 
         <hr />
 
@@ -74,6 +83,13 @@ onMounted(async () => {
 .container {
   .description {
     margin: 1rem 0;
+  }
+
+  .post-fields {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
   }
 }
 </style>
