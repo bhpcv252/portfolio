@@ -5,7 +5,9 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     css: ["~/assets/styles/global.scss"],
     modules: ["nuxt-svgo", "@nuxtjs/device", "@nuxt/content"],
-
+    generate: {
+        fallback: "404.html",
+    },
     svgo: {
         defaultImport: "component",
     },

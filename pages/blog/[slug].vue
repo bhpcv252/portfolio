@@ -60,7 +60,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import "github-markdown-css/github-markdown-light.css";
 
 useHead({
@@ -70,10 +70,23 @@ useHead({
 });
 
 const route = useRoute();
+const router = useRouter();
 const post = ref(null);
 
 onMounted(async () => {
-  post.value = await queryContent("blog", route.params.slug).findOne();
+  try {
+    post.value = await queryContent("blog", route.params.slug).findOne();
+
+    if (!post.value) {
+      throw new Error("Content not found.");
+    }
+  } catch (error) {
+    throw showError({
+      statusCode: 404,
+      fatal: true,
+      message: "Page Not Found",
+    });
+  }
 });
 </script>
 
