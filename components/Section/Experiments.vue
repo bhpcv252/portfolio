@@ -11,17 +11,16 @@
         <GridRow>
           <GridCol :from="2" :to="6">
             <p>
-              I like to experiment with new <em>animations</em>,
-              <em>transitions</em>, and <em>3D elements</em>, constantly
-              exploring their potential to elevate the user experience in future
-              projects.
+              I like experimenting with all sorts of things — animations,
+              transitions, simulations, new tools, and just digging into
+              different areas of research.
             </p>
           </GridCol>
           <GridCol :from="8" :to="12">
             <p>
-              From implementing subtle transitions to incorporating immersive 3D
-              effects, I'm always looking for innovative ways to push the
-              boundaries of digital design.
+              Check out the links below to dive into my work, explore ongoing
+              projects, discover experiments, and stay updated with the latest
+              insights and developments.
             </p>
           </GridCol>
         </GridRow>
