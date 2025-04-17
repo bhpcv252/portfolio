@@ -60,7 +60,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { useRoute, useRouter } from "vue-router";
+import { useRoute } from "vue-router";
 import "github-markdown-css/github-markdown-light.css";
 
 useHead({
@@ -70,7 +70,6 @@ useHead({
 });
 
 const route = useRoute();
-const router = useRouter();
 const post = ref(null);
 
 onMounted(async () => {
