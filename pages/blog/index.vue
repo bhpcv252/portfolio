@@ -115,8 +115,8 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, onMounted } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import { computed, ref } from "vue";
 import Pagination from "~/components/Pagination.vue";
 import { extractTextFromAST } from "~/utils/blog.ts";
 
@@ -126,98 +126,84 @@ useHead({
   },
 });
 
-const router = useRouter();
 const route = useRoute();
-const currentPage = ref(Number.parseInt(route.query.page || 1));
+const router = useRouter();
+
 const perPage = 5;
-const posts = ref([]);
-const totalPages = ref(0);
+const currentPage = computed(() => Number.parseInt(route.query.page || "1"));
 
-// Filters
-const searchQuery = ref(route.query.search || ""); // Default to empty search if not present
-const selectedCategory = ref(route.query.category || ""); // Default to empty category if not present
-const selectedTag = ref(route.query.tag || ""); // Default to empty tag if not present
-const startDate = ref(route.query.start || ""); // Default to empty start date if not present
-const endDate = ref(route.query.end || ""); // Default to empty end date if not present
+const searchQuery = computed(() => route.query.search || "");
+const selectedCategory = computed(() => route.query.category || "");
+const selectedTag = computed(() => route.query.tag || "");
+const startDate = computed(() => route.query.start || "");
+const endDate = computed(() => route.query.end || "");
 
-const categories = ref([]);
-const tags = ref([]);
-
-const fetchPosts = async () => {
-  let query = queryContent("blog").sort({ date: -1 });
-
-  // Apply category filter
-  if (selectedCategory.value) {
-    query = query.where({ category: { $eq: selectedCategory.value } });
-  }
-
-  // Apply tag filter
-  if (selectedTag.value) {
-    query = query.where({ tags: { $in: selectedTag.value } });
-  }
-
-  // Apply date range filter
-  if (startDate.value) {
-    query = query.where({ date: { $gte: startDate.value } });
-  }
-  if (endDate.value) {
-    query = query.where({ date: { $lte: endDate.value } });
-  }
-
-  // Fetch all posts
-  const allPosts = await query.find();
-
-  // Client-side search filter
-  if (searchQuery.value) {
-    const searchText = searchQuery.value.toLowerCase();
-    // Filter posts by title or body content (case-insensitive search)
-    posts.value = allPosts.filter((post) => {
-      const bodyText = extractTextFromAST(post.body) || "";
-      return (
-        post.title.toLowerCase().includes(searchText) ||
-        bodyText.toLowerCase().includes(searchText)
-      );
-    });
-  } else {
-    posts.value = allPosts;
-  }
-
-  totalPages.value = Math.ceil(posts.value.length / perPage);
-  const start = (currentPage.value - 1) * perPage;
-  posts.value = posts.value.slice(start, start + perPage);
-};
-
-const loadCategoriesAndTags = async () => {
-  const allPosts = await queryContent("blog").find();
-
-  // Extract unique categories and tags
-  categories.value = [...new Set(allPosts.map((post) => post.category))];
-  tags.value = [...new Set(allPosts.flatMap((post) => post.tags))];
-};
-
-// Load categories and tags when the component mounts
-onMounted(() => {
-  loadCategoriesAndTags();
-  fetchPosts(); // Initial fetch of posts
+// Fetch categories and tags
+const { data: allPostsData } = await useAsyncData("all-posts", async () => {
+  return await queryContent("blog").find();
 });
 
-watch(
-  () => route.query,
-  (newQuery) => {
-    currentPage.value = Number.parseInt(newQuery.page || 1);
-    searchQuery.value = newQuery.search || "";
-    selectedCategory.value = newQuery.category || "";
-    selectedTag.value = newQuery.tag || "";
-    startDate.value = newQuery.start || "";
-    endDate.value = newQuery.end || "";
+const categories = computed(() => {
+  const catSet = new Set(allPostsData.value?.map((post) => post.category));
+  return Array.from(catSet);
+});
 
-    fetchPosts();
+const tags = computed(() => {
+  const tagSet = new Set(allPostsData.value?.flatMap((post) => post.tags));
+  return Array.from(tagSet);
+});
+
+// Filter and paginate posts
+const { data: filteredPostsData } = await useAsyncData(
+  "filtered-posts",
+  async () => {
+    let query = queryContent("blog").sort({ date: -1 });
+
+    if (selectedCategory.value) {
+      query = query.where({ category: { $eq: selectedCategory.value } });
+    }
+
+    if (selectedTag.value) {
+      query = query.where({ tags: { $in: selectedTag.value } });
+    }
+
+    if (startDate.value) {
+      query = query.where({ date: { $gte: startDate.value } });
+    }
+
+    if (endDate.value) {
+      query = query.where({ date: { $lte: endDate.value } });
+    }
+
+    const all = await query.find();
+
+    // Client-side search filter
+    let filtered = all;
+    if (searchQuery.value) {
+      const searchText = searchQuery.value.toLowerCase();
+      filtered = all.filter((post) => {
+        const bodyText = extractTextFromAST(post.body) || "";
+        return (
+          post.title.toLowerCase().includes(searchText) ||
+          bodyText.toLowerCase().includes(searchText)
+        );
+      });
+    }
+
+    return filtered;
   },
-  { immediate: true },
 );
 
+const totalPages = computed(() => {
+  return Math.ceil((filteredPostsData.value?.length || 0) / perPage);
+});
+
+const posts = computed(() => {
+  const start = (currentPage.value - 1) * perPage;
+  return filteredPostsData.value?.slice(start, start + perPage) || [];
+});
+
 const changePage = (page) => {
-  currentPage.value = page;
   router.push({
     query: {
       page,

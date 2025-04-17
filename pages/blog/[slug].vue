@@ -59,8 +59,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
+import { useAsyncData } from "nuxt/app";
+import { showError } from "#app";
 import "github-markdown-css/github-markdown-light.css";
 
 useHead({
@@ -70,23 +71,26 @@ useHead({
 });
 
 const route = useRoute();
-const post = ref(null);
 
-onMounted(async () => {
-  try {
-    post.value = await queryContent("blog", route.params.slug).findOne();
+const { data: post, error } = await useAsyncData(
+  `post-${route.params.slug}`,
+  async () => {
+    const result = await queryContent("blog", route.params.slug).findOne();
 
-    if (!post.value) {
-      throw new Error("Content not found.");
+    if (!result) {
+      throw createError({
+        statusCode: 404,
+        statusMessage: "Post not found",
+      });
     }
-  } catch (error) {
-    throw showError({
-      statusCode: 404,
-      fatal: true,
-      message: "Page Not Found",
-    });
-  }
-});
+
+    return result;
+  },
+);
+
+if (error.value) {
+  showError(error.value);
+}
 </script>
 
 <style lang="scss" scoped>
