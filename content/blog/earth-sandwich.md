@@ -46,6 +46,8 @@ Honestly, just for fun. I wasn’t trying to solve a problem—just satisfy a ra
 
 It’s also a weirdly effective way to better understand the shape of the Earth—not just in theory, but in terms of how land and water are distributed.
 
-If you’re curious too, or just want to see where you'd end up if you dug through the planet, give it a try:
-
+If you’re curious too, or just want to see where you'd end up if you dug through the planet, give it a try:<br>
 👉 [https://earth-sandwich.bhpcv252.workers.dev/](https://earth-sandwich.bhpcv252.workers.dev/)
+
+The source code is available on GitHub if you want to explore or fork it:<br>
+🔗 [https://github.com/bhpcv252/earth-sandwich](https://github.com/bhpcv252/earth-sandwich)
